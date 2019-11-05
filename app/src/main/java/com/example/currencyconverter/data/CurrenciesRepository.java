@@ -34,7 +34,7 @@ public class CurrenciesRepository implements ICurrenciesRepository {
     /**
      * Constructor
      *
-     * @param currencyConverter используется для конвертации загруженных валют в  domain entity
+     * @param currencyConverter используется для конвертации загруженных валют в domain entity
      */
     public CurrenciesRepository(@NonNull CurrencyConverter currencyConverter) {
         mCurrencyConverter = currencyConverter;
@@ -51,8 +51,8 @@ public class CurrenciesRepository implements ICurrenciesRepository {
     @NonNull
     @Override
     public List<Currency> loadCurrencies() throws IOException {
-        Call<CurrenciesData> listCall = mRatesApi.loadCurrencies();
-        Response<CurrenciesData> response = listCall.execute();
+        Response<CurrenciesData> response = mRatesApi.loadCurrencies()
+                .execute();
         if (response.body() == null || response.errorBody() != null) {
             throw new IOException("Не удалось загрузить список валют");
         }

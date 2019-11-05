@@ -19,6 +19,7 @@ import java.util.List;
  * @author Evgeny Chumak
  **/
 public class ConversionInteractor {
+
     /**
      * Точность при расчётах (знаков после запятой)
      */

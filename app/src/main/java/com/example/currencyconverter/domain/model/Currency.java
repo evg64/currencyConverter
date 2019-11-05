@@ -18,7 +18,7 @@ public class Currency {
     private final BigDecimal mValue;
 
     public Currency(
-            String id,
+            @NonNull String id,
             @NonNull String charCode,
             long nominal,
             @NonNull String name,
@@ -52,6 +52,7 @@ public class Currency {
         return Objects.hash(mId, mCharCode, mNominal, mName, mValue);
     }
 
+    @NonNull
     public String getId() {
         return mId;
     }
@@ -61,7 +62,6 @@ public class Currency {
         return mCharCode;
     }
 
-    @NonNull
     public long getNominal() {
         return mNominal;
     }

@@ -12,9 +12,11 @@ import org.simpleframework.xml.convert.Convert;
 import java.math.BigDecimal;
 
 /**
+ * Валюта (data-представление)
+ *
  * @author Evgeny Chumak
  **/
-@Root(name = "Valute", strict = false)
+@Root(name = "Valute")
 public class CurrencyData {
 
     @Attribute(name = "ID")
@@ -31,10 +33,15 @@ public class CurrencyData {
     @Convert(BigDecimalConverter.class)
     private BigDecimal mValue;
 
+    /**
+     * Используется при парсинге через SimpleXml
+     */
     public CurrencyData() {
-
     }
 
+    /**
+     * Используется в юнит тестах
+     */
     @VisibleForTesting
     public CurrencyData(String id, int numCode, String charCode, long nominal, String name, BigDecimal value) {
         mId = id;
