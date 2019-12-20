@@ -93,12 +93,4 @@ public class CurrenciesRepositoryTest {
         // act
         mCurrenciesRepository.loadCurrencies();
     }
-
-    // Call<CurrenciesData> listCall = mRatesApi.loadCurrencies();
-    // Response<CurrenciesData> response = listCall.execute();
-    //     if (response.body() == null) {
-    //     throw new IOException("Не удалось загрузить список валют");
-    // }
-    // List<CurrencyData> currencies = response.body().getCurrencies();
-    //     return mCurrencyConverter.convert(currencies);
 }

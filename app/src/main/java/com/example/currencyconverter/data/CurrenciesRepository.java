@@ -15,7 +15,6 @@ import org.simpleframework.xml.strategy.Strategy;
 import java.io.IOException;
 import java.util.List;
 
-import retrofit2.Call;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.simplexml.SimpleXmlConverterFactory;

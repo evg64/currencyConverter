@@ -19,7 +19,7 @@ public class BigDecimalConverter implements Converter<BigDecimal> {
     }
 
     @Override
-    public void write(OutputNode node, BigDecimal value) throws Exception {
+    public void write(OutputNode node, BigDecimal value) {
         throw new UnsupportedOperationException("Serialization is not supported");
     }
 }

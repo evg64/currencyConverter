@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Отображает валюты в спиннере
+ *
  * @author Evgeny Chumak
  **/
 public class CurrencyAdapter extends BaseAdapter {
@@ -51,12 +53,6 @@ public class CurrencyAdapter extends BaseAdapter {
         Currency currency = getItem(position);
         Holder holder = (Holder) convertView.getTag();
         if (currency != null) {
-            // String text = String.format(
-            //         Locale.getDefault(),
-            //         "%d %s",
-            //         currency.getNominal(),
-            //         currency.getName()
-            // );
             String text = currency.getName();
             holder.mText.setText(text);
         }

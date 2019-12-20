@@ -25,7 +25,7 @@ public class CurrencyViewModelFactory extends ViewModelProvider.NewInstanceFacto
 
     private final Context mApplicationContext;
 
-    public CurrencyViewModelFactory(@NonNull Context context) {
+    CurrencyViewModelFactory(@NonNull Context context) {
         mApplicationContext = context.getApplicationContext();
     }
 
@@ -39,10 +39,10 @@ public class CurrencyViewModelFactory extends ViewModelProvider.NewInstanceFacto
             ResourceWrapper resourceWrapper = new ResourceWrapper(mApplicationContext.getResources());
             // noinspection unchecked
             return (T) new CurrencyConverterViewModel(
-                    interactor,
-                    executor,
-                    resourceWrapper,
-                    new ConversionInteractor(resourceWrapper));
+                interactor,
+                executor,
+                resourceWrapper,
+                new ConversionInteractor(resourceWrapper));
         } else {
             return super.create(modelClass);
         }

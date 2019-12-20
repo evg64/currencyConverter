@@ -22,6 +22,7 @@ public class CurrenciesInteractor {
     /**
      * Загружает список валют
      */
+    @NonNull
     public List<Currency> loadCurrencies() throws LoadCurrenciesException {
         try {
             return mCurrenciesRepository.loadCurrencies();
